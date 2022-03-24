@@ -1,0 +1,2 @@
+MPC_feedback.c:14:6:computePositionWithEncoder	8	static
+MPC_feedback.c:73:6:measureADC	8	static

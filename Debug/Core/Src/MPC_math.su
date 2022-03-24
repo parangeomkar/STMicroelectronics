@@ -1,0 +1,7 @@
+MPC_math.c:15:7:limitTheta	16	static
+MPC_math.c:29:7:sin2	16	static
+MPC_math.c:50:7:cos2	16	static
+MPC_math.c:61:7:sinLowRes	16	static
+MPC_math.c:80:6:parkTransform	24	static
+MPC_math.c:89:6:inverseParkTransform	24	static
+MPC_math.c:99:6:computeSinCos	8	static
