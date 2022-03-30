@@ -2,6 +2,8 @@
 #include "MPC_math.h"
 #include "MPC_core.h"
 #include "MPC_feedback.h"
+#include "untitled0.h"
+#include "rtwtypes.h"
 
 __attribute__((section(".rxBuffer"),used)) uint32_t Iab[3];
 __attribute__((section(".rxBuffer"),used)) uint32_t Icd[1];
@@ -12,6 +14,12 @@ __attribute__((section(".rxBuffer"),used)) uint32_t Icd[1];
  */
 uint16_t x = 1;
 void computePositionWithEncoder(){
+//	rtU.y[0] = ((float)Ia)/1230;
+//	rtU.y[1] = ((float)Ib)/1230;
+//	rtU.y[2] = ((float)Ic)/1230;
+//
+//	untitled0_step();
+
 	thetaElec = 90 + 360*TIM3->CNT/300;
 
 

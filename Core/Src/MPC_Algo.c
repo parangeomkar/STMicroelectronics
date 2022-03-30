@@ -29,9 +29,12 @@ void initModelPredictiveControl(){
 }
 
 int16_t lambda1 = 0;
+float Vab[3];
 void modelPredictiveControl(){
 	computeSinCos();
 	parkTransform(Ia,Ib,Ic,&Idq);
+	clarkeTransform(Ia, Ib, Ic, &Ialbt);
+	clarkeTransform(Vab[0], Vab[1], Vab[2], &Valbt);
 
 	IdTemp = Idq.d/1230;
 	IqTemp = Idq.q/1230;
@@ -61,6 +64,9 @@ void modelPredictiveControl(){
 			optimalVector = i;
 			cost = costTemp;
 			IqTx = IqPred*123/1000;
+			Vab[0] = Va;
+			Vab[1] = Vb;
+			Vab[2] = Vc;
 		}
 	}
 

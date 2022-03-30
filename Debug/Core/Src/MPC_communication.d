@@ -35,7 +35,8 @@ Core/Src/MPC_communication.o: ../Core/Src/MPC_communication.c \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../Core/Inc/MPC_math.h ../Core/Inc/MPC_core.h ../Core/Inc/MPC_PWM.h \
- ../Core/Inc/MPC_feedback.h ../Core/Inc/MPC_communication.h
+ ../Core/Inc/MPC_feedback.h ../Core/Inc/MPC_communication.h \
+ ../Core/Inc/rtwtypes.h ../Core/Inc/untitled0.h ../Core/Inc/rtwtypes.h
 
 ../Core/Inc/main.h:
 
@@ -118,3 +119,9 @@ Core/Src/MPC_communication.o: ../Core/Src/MPC_communication.c \
 ../Core/Inc/MPC_feedback.h:
 
 ../Core/Inc/MPC_communication.h:
+
+../Core/Inc/rtwtypes.h:
+
+../Core/Inc/untitled0.h:
+
+../Core/Inc/rtwtypes.h:

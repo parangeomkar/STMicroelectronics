@@ -5,3 +5,4 @@ MPC_math.c:61:7:sinLowRes	16	static
 MPC_math.c:80:6:parkTransform	24	static
 MPC_math.c:89:6:inverseParkTransform	24	static
 MPC_math.c:99:6:computeSinCos	8	static
+MPC_math.c:114:6:clarkeTransform	24	static

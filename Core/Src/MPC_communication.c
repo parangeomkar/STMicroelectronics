@@ -4,13 +4,15 @@
 #include "MPC_PWM.h"
 #include "MPC_feedback.h"
 #include "MPC_communication.h"
+#include "rtwtypes.h"
+#include "untitled0.h"
 
 // Variables used by transferUART()
 
 __attribute__((section(".rxBuffer"),used)) uint8_t comCode[3];
 
 
-uint8_t txData[6];
+uint8_t txData[10];
 uint8_t comCode[3],startTx,testEnd;
 uint8_t c = 0;
 /**
@@ -21,16 +23,22 @@ int16_t arr[10000], idx;
 uint32_t err,asdsda;
 void transferUART(){
 	if(startTx){
-			txData[0] = ((optimalVector + 30000)) & 0xff;
-			txData[1] = (((optimalVector + 30000)) >> 8) & 0xff;
+			txData[0] = ((thetaElec + 30000)) & 0xff;
+			txData[1] = ((thetaElec + 30000) >> 8) & 0xff;
 
-			txData[2] = ((thetaElec + 30000)) & 0xff;
-			txData[3] = (((thetaElec + 30000)) >> 8) & 0xff;
+			txData[2] = ((uint16_t)(Valbt.alpha*100 + 30000)) & 0xff;
+			txData[3] = ((uint16_t)(Valbt.alpha*100 + 30000) >> 8) & 0xff;
 
-			txData[4] = ((0 + 30000)) & 0xff;
-			txData[5] = (((0 + 30000)) >> 8) & 0xff;
+			txData[4] = ((uint16_t)(Valbt.beta*100 + 30000)) & 0xff;
+			txData[5] = (((uint16_t)(Valbt.beta*100 + 30000)) >> 8) & 0xff;
 
-			HAL_UART_Transmit(&huart3, txData,6,10);
+			txData[6] = ((uint16_t)(Ialbt.beta*100 + 30000)) & 0xff;
+			txData[7] = (((uint16_t)(Ialbt.beta*100 + 30000)) >> 8) & 0xff;
+
+			txData[8] = ((uint16_t)(Ialbt.beta*100 + 30000)) & 0xff;
+			txData[9] = (((uint16_t)(Ialbt.beta*100 + 30000)) >> 8) & 0xff;
+
+			HAL_UART_Transmit(&huart3, txData,10,10);
 //			asdsda++;
 //			if(asdsda > 5000){
 //				speedReq = 1500;

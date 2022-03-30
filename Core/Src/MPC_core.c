@@ -62,7 +62,7 @@ void testSVPWM(){
  */
 uint16_t ex;
 void executeAll(){
-//	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 	measureADC();
 
 	if(run){
@@ -92,5 +92,5 @@ void executeAll(){
 	}
 
 	SVPWM();
-//	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 }

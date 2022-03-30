@@ -104,3 +104,14 @@ void computeSinCos(){
 	cos120 = cos2(thetaElec+120);
 	cos240 = cos2(thetaElec+240);
 }
+
+
+
+/**
+ * This function computes Clarke transform
+ *
+ */
+void clarkeTransform(float a, float b, float c, struct alphaBeta *Xalbt){
+	Xalbt->alpha = (a*2/3) - ((b+c)/3);
+	Xalbt->beta = (b-c)*250/433;
+}

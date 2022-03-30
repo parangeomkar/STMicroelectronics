@@ -13,7 +13,7 @@
  */
 
 float Iterm = 0;
-int16_t speedReq = 1000;
+int16_t speedReq = 1500;
 void SpeedPIController(){
 	float Kp = 2;
 	float Ki = 0.1;
