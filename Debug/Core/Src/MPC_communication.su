@@ -1,3 +1,3 @@
-MPC_communication.c:24:6:transferUART	8	static
-MPC_communication.c:65:6:receiveUART	8	static
-MPC_communication.c:75:6:handleRxCommands	8	static
+MPC_communication.c:25:6:transferUART	8	static
+MPC_communication.c:69:6:receiveUART	8	static
+MPC_communication.c:79:6:handleRxCommands	8	static

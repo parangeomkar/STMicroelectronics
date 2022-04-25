@@ -11,6 +11,7 @@
 
 __attribute__((section(".rxBuffer"),used)) uint8_t comCode[3];
 
+void switchToANN();
 
 uint8_t txData[10];
 uint8_t comCode[3],startTx,testEnd;
@@ -20,20 +21,23 @@ uint8_t c = 0;
  *
  */
 int16_t arr[10000], idx;
-uint32_t err,asdsda;
+uint32_t err,asdsda,nasd;
 void transferUART(){
 	if(startTx){
-			txData[0] = ((thetaElec + 30000)) & 0xff;
-			txData[1] = ((thetaElec + 30000) >> 8) & 0xff;
+			txData[0] = ((thetaElec - 180 + 30000)) & 0xff;
+			txData[1] = ((thetaElec - 180 + 30000) >> 8) & 0xff;
 
-			txData[2] = ((uint16_t)(Valbt.alpha*100 + 30000)) & 0xff;
-			txData[3] = ((uint16_t)(Valbt.alpha*100 + 30000) >> 8) & 0xff;
+			txData[2] = ((uint16_t)(annOut*100 + 30000)) & 0xff;
+			txData[3] = ((uint16_t)(annOut*100 + 30000) >> 8) & 0xff;
+
+//			txData[2] = ((uint16_t)(Valbt.alpha*100 + 30000)) & 0xff;
+//			txData[3] = ((uint16_t)(Valbt.alpha*100 + 30000) >> 8) & 0xff;
 
 			txData[4] = ((uint16_t)(Valbt.beta*100 + 30000)) & 0xff;
 			txData[5] = (((uint16_t)(Valbt.beta*100 + 30000)) >> 8) & 0xff;
 
-			txData[6] = ((uint16_t)(Ialbt.beta*100 + 30000)) & 0xff;
-			txData[7] = (((uint16_t)(Ialbt.beta*100 + 30000)) >> 8) & 0xff;
+			txData[6] = ((uint16_t)(Ialbt.alpha*100 + 30000)) & 0xff;
+			txData[7] = (((uint16_t)(Ialbt.alpha*100 + 30000)) >> 8) & 0xff;
 
 			txData[8] = ((uint16_t)(Ialbt.beta*100 + 30000)) & 0xff;
 			txData[9] = (((uint16_t)(Ialbt.beta*100 + 30000)) >> 8) & 0xff;
@@ -76,6 +80,7 @@ void handleRxCommands(){
 
 	if(comCode[0] == 101){
 		startTx = 1;
+		switchToANN();
 	} else if(comCode[0] == 102){
 //		testEnd = 1;
 		startTx = 0;

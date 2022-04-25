@@ -5,6 +5,7 @@
 	extern ADC_HandleTypeDef hadc3;
 	extern TIM_HandleTypeDef htim2;
 
+	float annOut;
 
 	// Variables used by computePosition()
 	int16_t thetaElec,thetaElecOld,thetaElecTemp,thetaElecEncoder;
@@ -58,4 +59,8 @@
 
 
 	void SpeedPIController();
+
+	void initANN();
+	void runANN();
+
 #endif

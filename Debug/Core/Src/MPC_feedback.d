@@ -23,6 +23,8 @@ Core/Src/MPC_feedback.o: ../Core/Src/MPC_feedback.c ../Core/Inc/main.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h \
+ ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h \
@@ -35,7 +37,10 @@ Core/Src/MPC_feedback.o: ../Core/Src/MPC_feedback.c ../Core/Inc/main.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  ../Core/Inc/MPC_math.h ../Core/Inc/MPC_core.h ../Core/Inc/MPC_feedback.h \
- ../Core/Inc/untitled0.h ../Core/Inc/rtwtypes.h ../Core/Inc/rtwtypes.h
+ ../Core/Inc/untitled0.h ../Core/Inc/rtwtypes.h ../Core/Inc/rtwtypes.h \
+ ../Middlewares/ST/AI/Inc/ai_datatypes_defines.h \
+ ../Middlewares/ST/AI/Inc/ai_platform.h ../X-CUBE-AI/App/network.h \
+ ../X-CUBE-AI/App/network_config.h ../X-CUBE-AI/App/network_data.h
 
 ../Core/Inc/main.h:
 
@@ -87,6 +92,10 @@ Core/Src/MPC_feedback.o: ../Core/Src/MPC_feedback.c ../Core/Inc/main.h \
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h:
 
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc.h:
+
+../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_crc_ex.h:
+
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h:
 
 ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h:
@@ -120,3 +129,13 @@ Core/Src/MPC_feedback.o: ../Core/Src/MPC_feedback.c ../Core/Inc/main.h \
 ../Core/Inc/rtwtypes.h:
 
 ../Core/Inc/rtwtypes.h:
+
+../Middlewares/ST/AI/Inc/ai_datatypes_defines.h:
+
+../Middlewares/ST/AI/Inc/ai_platform.h:
+
+../X-CUBE-AI/App/network.h:
+
+../X-CUBE-AI/App/network_config.h:
+
+../X-CUBE-AI/App/network_data.h:

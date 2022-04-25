@@ -1,2 +1,5 @@
-MPC_feedback.c:16:6:computePositionWithEncoder	8	static
-MPC_feedback.c:81:6:measureADC	8	static
+MPC_feedback.c:40:6:computePositionWithEncoder	16	static
+MPC_feedback.c:145:6:measureADC	8	static
+MPC_feedback.c:167:6:initANN	96	static
+MPC_feedback.c:202:6:runANN	8	static
+MPC_feedback.c:226:6:switchToANN	4	static
